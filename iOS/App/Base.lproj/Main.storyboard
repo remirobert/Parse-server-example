@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Cvg-s7-MSo">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Parse-example-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="puJ-6d-DWG">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="O7o-W6-0iu"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Say HI 👋😉" id="s1g-MA-ODy">
+                                        <connections>
+                                            <action selector="callCloudFunction:" destination="BYZ-38-t0r" id="rT9-CM-8Et"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="z97-Bc-6VC"/>
+                                    <barButtonItem title="Add random number" id="Iqu-mM-ucV">
+                                        <connections>
+                                            <action selector="addNewItem:" destination="BYZ-38-t0r" id="Qi2-ym-AOF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n6I-Fa-3gT">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="puJ-6d-DWG" firstAttribute="top" secondItem="n6I-Fa-3gT" secondAttribute="bottom" id="8e4-xp-uMR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="puJ-6d-DWG" secondAttribute="trailing" constant="-20" id="BHZ-dy-hH2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="puJ-6d-DWG" secondAttribute="bottom" id="ELB-MK-bSd"/>
+                            <constraint firstItem="n6I-Fa-3gT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="I8j-q5-weV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n6I-Fa-3gT" secondAttribute="trailing" constant="-20" id="Z6G-1b-oE6"/>
+                            <constraint firstItem="puJ-6d-DWG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="dlq-K5-O9f"/>
+                            <constraint firstItem="n6I-Fa-3gT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="g7g-sn-lRg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Parse-example" id="cXc-lc-FgA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="jos-UJ-vkJ">
+                            <connections>
+                                <action selector="refreshData:" destination="BYZ-38-t0r" id="gwi-Vf-syu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addNewObjectButton" destination="Iqu-mM-ucV" id="6A1-3Q-Fa4"/>
+                        <outlet property="cloudFunctionButton" destination="puJ-6d-DWG" id="kYI-Bc-aUQ"/>
+                        <outlet property="tableView" destination="n6I-Fa-3gT" id="Y7I-jd-wwv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="994" y="1049"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Urk-rc-qDT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cvg-s7-MSo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vZT-sn-bSH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gHu-1E-YvY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgq-hJ-8Bw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="1049"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Parse server example",
+  "main": "app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "= <remirobert33530@gmail.com> (remirobert.github.io)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongodb-runner": "^3.2.0",
+    "parse": "^1.8.1",
+    "parse-server": "^2.2.6"
+  }
+}
