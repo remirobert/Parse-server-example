@@ -1,5 +1,6 @@
 # Parse-server-example 🍕🔥
-Project iOS, with Parse-server to create an example. Build for the While42 talk in Shanghai
+This is a demonstration of **Parse-server**, the opensource version. With an iOS application 📱.
+Made for my talk in the **While42** group in Shanghai 🇨🇳.
 
 # Instructions
 
